@@ -1,0 +1,358 @@
+.type-chart {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.chart-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chart-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0 0 10px 0;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chart-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.type-chart-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 50px;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin-bottom: 30px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(18, 80px);
+  gap: 2px;
+  min-width: 1600px;
+}
+
+.chart-header-row {
+  display: contents;
+}
+
+.chart-corner {
+  background: #f8f9fa;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.chart-header-cell {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.2;
+}
+
+.chart-header-cell:hover,
+.chart-header-cell.selected {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chart-row {
+  display: contents;
+}
+
+.chart-row-header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  padding: 5px;
+  line-height: 1.2;
+}
+
+.chart-row-header:hover,
+.chart-row-header.selected {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chart-cell {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.chart-cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.chart-cell.highlighted {
+  box-shadow: 0 0 0 3px #667eea;
+}
+
+.chart-cell.hovered {
+  transform: scale(1.05);
+}
+
+/* Effectiveness colors */
+.chart-cell.no-effect {
+  background: linear-gradient(45deg, #636e72, #2d3436);
+}
+
+.chart-cell.not-very-effective {
+  background: linear-gradient(45deg, #fdcb6e, #f39c12);
+}
+
+.chart-cell.normal {
+  background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+}
+
+.chart-cell.super-effective {
+  background: linear-gradient(45deg, #00b894, #00a085);
+}
+
+.chart-legend {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.chart-legend h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.legend-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.legend-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+}
+
+.legend-color.no-effect {
+  background: linear-gradient(45deg, #636e72, #2d3436);
+}
+
+.legend-color.not-very-effective {
+  background: linear-gradient(45deg, #fdcb6e, #f39c12);
+}
+
+.legend-color.normal {
+  background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+}
+
+.legend-color.super-effective {
+  background: linear-gradient(45deg, #00b894, #00a085);
+}
+
+.type-details {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.type-details h3 {
+  margin: 0 0 25px 0;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.type-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.type-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #667eea;
+}
+
+.type-section h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.type-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.type-badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.type-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.no-types {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.error-message {
+  text-align: center;
+  color: #e74c3c;
+  font-weight: bold;
+  padding: 20px;
+  background: #fdf2f2;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1600px) {
+  .chart-container {
+    overflow-x: auto;
+  }
+  
+  .chart-grid {
+    min-width: 1600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .type-chart {
+    padding: 15px;
+  }
+  
+  .chart-header h2 {
+    font-size: 2rem;
+  }
+  
+  .chart-container {
+    padding: 15px;
+  }
+  
+  .chart-grid {
+    grid-template-columns: 100px repeat(18, 70px);
+    gap: 1px;
+  }
+  
+  .chart-header-cell,
+  .chart-row-header {
+    font-size: 0.6rem;
+    height: 40px;
+  }
+  
+  .chart-cell {
+    height: 40px;
+    font-size: 0.8rem;
+  }
+  
+  .legend-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .type-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .type-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-grid {
+    grid-template-columns: 80px repeat(18, 60px);
+  }
+  
+  .chart-header-cell,
+  .chart-row-header {
+    font-size: 0.5rem;
+    height: 35px;
+  }
+  
+  .chart-cell {
+    height: 35px;
+    font-size: 0.7rem;
+  }
+} 
