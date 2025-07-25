@@ -2,6 +2,10 @@
 
 A comprehensive web application for Pokemon GO players, providing detailed information about Pokemon, raid bosses, and powerful tools for team building and analysis. Built with React and Vite, designed for optimal performance and user experience.
 
+## 🌐 Live Demo
+
+**🚀 Deployed on GitHub Pages**: [View Live Site](https://your-username.github.io/PokeGOAPi/)
+
 ## ✨ Features
 
 ### 🔍 Pokemon Search
