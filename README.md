@@ -4,7 +4,7 @@ A comprehensive web application for Pokemon GO players, providing detailed infor
 
 ## 🌐 Live Demo
 
-**🚀 Deployed on GitHub Pages**: [View Live Site](https://your-username.github.io/PokeGOAPi/)
+**🚀 Deployed on GitHub Pages**: [View Live Site](https://16awaldner.github.io/PokeWalds/)
 
 ## ✨ Features
 
